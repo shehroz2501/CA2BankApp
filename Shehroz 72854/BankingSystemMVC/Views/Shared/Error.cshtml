@@ -1,0 +1,23 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">An error occurred.</h1>
+<h2 class="text-danger">Sorry, an error occurred while processing your request.</h2>
+
+<p>
+    <strong>Error Message:</strong> @Model.ErrorMessage
+</p>
+
+<p>
+    <strong>Request ID:</strong> @Model.RequestId
+</p>
+
+<p>
+    <strong>Path:</strong> @Model.Path
+</p>
+
+<p>
+    <strong>Stack Trace:</strong> @Model.StackTrace
+</p>

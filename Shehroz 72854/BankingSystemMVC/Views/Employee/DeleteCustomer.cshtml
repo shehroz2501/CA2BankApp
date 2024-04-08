@@ -1,0 +1,10 @@
+﻿<h2>Delete Customer</h2>
+
+<form asp-action="DeleteCustomer" method="post" class="needs-validation" novalidate>
+    <div class="form-group">
+        <label for="accNumber">Account Number:</label>
+        <input type="text" class="form-control" id="accNumber" name="accNumber" required />
+        <div class="invalid-feedback">Please provide your PIN.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Delete</button>
+</form>

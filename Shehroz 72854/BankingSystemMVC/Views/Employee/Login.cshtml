@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Customer Login";
+}
+
+<h2>Employee Login</h2>
+
+<form asp-action="Login" method="post" class="needs-validation" novalidate>
+    <div class="form-group">
+        <label for="pin">PIN:</label>
+        <input type="password" class="form-control" id="pin" name="pin" required />
+        <div class="invalid-feedback">Please provide your PIN.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+@section Scripts {
+    <script>
+        // Prevent form submission if fields are invalid
+        (function () {
+            'use strict';
+            var forms = document.querySelectorAll('.needs-validation');
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+        })();
+    </script>
+}

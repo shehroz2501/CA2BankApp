@@ -1,0 +1,42 @@
+﻿@model BankingSystemMVC.Models.Customer
+
+<h2>Create Customer</h2>
+
+<form asp-action="CreateCustomer" method="post" class="needs-validation" novalidate>
+    <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" required />
+        <div class="invalid-feedback">Please provide a first name.</div>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" required />
+        <div class="invalid-feedback">Please provide a last name.</div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required />
+        <div class="invalid-feedback">Please provide a valid email.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Customer</button>
+</form>
+
+@section Scripts {
+    <script>
+        // Prevent form submission if fields are invalid
+        (function () {
+            'use strict';
+            var forms = document.querySelectorAll('.needs-validation');
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+        })();
+    </script>
+}

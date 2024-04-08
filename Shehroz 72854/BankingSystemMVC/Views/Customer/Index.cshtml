@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Customer Dashboard";
+}
+
+<h2>Welcome, Customer!</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">Customer Actions</h3>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a asp-action="History" class="btn btn-info">View Transaction History</a></li>
+            <li class="list-group-item"><a asp-action="CreateTransaction" class="btn btn-success">Create Transaction</a></li>
+        </ul>
+    </div>
+</div>
